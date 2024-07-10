@@ -38,9 +38,9 @@ QML_IMPORT_PATH += $$PWD/src/QmlControls
 #
 
 MacBuild {
-    QMAKE_INFO_PLIST    = deploy/mac/Custom-Info.plist
+    QMAKE_INFO_PLIST    = deploy/mac/QGC-qmake-info.plist
     ICON                = $${SOURCE_DIR}/resources/icons/macx.icns
-    OTHER_FILES        += deploy/mac/Custom-Info.plist
+    OTHER_FILES        += deploy/mac/QGC-qmake-info.plist
     LIBS               += -framework ApplicationServices
 }
 
@@ -334,7 +334,7 @@ CustomBuild {
         RESOURCES += $$PWD/resources/InstrumentValueIcons/InstrumentValueIcons.qrc
     }
 } else {
-    DEFINES += QGC_APPLICATION_NAME=\"\\\"QGroundControl\\\"\"
+    DEFINES += QGC_APP_NAME=\"\\\"QGroundControl\\\"\"
     DEFINES += QGC_ORG_NAME=\"\\\"QGroundControl.org\\\"\"
     DEFINES += QGC_ORG_DOMAIN=\"\\\"org.qgroundcontrol\\\"\"
     RESOURCES += \
@@ -618,10 +618,10 @@ HEADERS += \
     src/MAVLink/QGCMAVLink.h \
     src/MAVLink/MAVLinkLib.h \
     src/MAVLink/MAVLinkFTP.h \
+    src/MAVLink/StatusTextHandler.h \
     src/Comms/TCPLink.h \
     src/Comms/UDPLink.h \
     src/Comms/UdpIODevice.h \
-    src/Vehicle/UASMessageHandler.h \
     src/AnalyzeView/GeoTagController.h \
     src/AnalyzeView/GeoTagWorker.h \
     src/AnalyzeView/ExifParser.h \
@@ -890,11 +890,11 @@ SOURCES += \
     src/Comms/MAVLinkProtocol.cc \
     src/MAVLink/QGCMAVLink.cc \
     src/MAVLink/MAVLinkFTP.cc \
+    src/MAVLink/StatusTextHandler.cc \
     src/Comms/TCPLink.cc \
     src/Comms/UDPLink.cc \
     src/Comms/UdpIODevice.cc \
     src/main.cc \
-    src/Vehicle/UASMessageHandler.cc \
     src/AnalyzeView/GeoTagController.cc \
     src/AnalyzeView/GeoTagWorker.cc \
     src/AnalyzeView/ExifParser.cc \
@@ -1151,7 +1151,6 @@ HEADERS += \
     src/FactSystem/FactControls/FactPanelController.h \
     src/FactSystem/FactGroup.h \
     src/FactSystem/FactMetaData.h \
-    src/FactSystem/FactSystem.h \
     src/FactSystem/FactValueSliderListModel.h \
     src/FactSystem/ParameterManager.h \
     src/FactSystem/SettingsFact.h \
@@ -1161,7 +1160,6 @@ SOURCES += \
     src/FactSystem/FactControls/FactPanelController.cc \
     src/FactSystem/FactGroup.cc \
     src/FactSystem/FactMetaData.cc \
-    src/FactSystem/FactSystem.cc \
     src/FactSystem/FactValueSliderListModel.cc \
     src/FactSystem/ParameterManager.cc \
     src/FactSystem/SettingsFact.cc \
