@@ -287,12 +287,12 @@ ApplicationWindow {
                 ColumnLayout {
                     width:  innerLayout.width + (toolSelectDialog._margins * 2)
                     height: innerLayout.height + (toolSelectDialog._margins * 2)
-
+                    
                     ColumnLayout {
                         id:             innerLayout
                         Layout.margins: toolSelectDialog._margins
                         spacing:        ScreenTools.defaultFontPixelWidth
-
+                        /*
                         SubMenuButton {
                             id:                 setupButton
                             height:             toolSelectDialog._toolButtonHeight
@@ -323,7 +323,7 @@ ApplicationWindow {
                                 }
                             }
                         }
-
+                        */
                         SubMenuButton {
                             id:                 settingsButton
                             height:             toolSelectDialog._toolButtonHeight
@@ -338,7 +338,9 @@ ApplicationWindow {
                                     mainWindow.showSettingsTool()
                                 }
                             }
+                        
                         }
+                        
 
                         ColumnLayout {
                             width:                  innerLayout.width

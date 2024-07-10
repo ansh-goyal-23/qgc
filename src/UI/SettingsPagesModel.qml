@@ -47,7 +47,7 @@ ListModel {
         iconUrl: "qrc:/InstrumentValueIcons/drone.svg"
         pageVisible: function() { return true }
     }
-
+    /*
     ListElement {
         name: qsTr("ADSB Server")
         url: "/qml/ADSBServerSettings.qml"
@@ -122,5 +122,6 @@ ListModel {
         iconUrl: "qrc:/InstrumentValueIcons/photo.svg"
         pageVisible: function() { return ScreenTools.isDebug }
     }
+    */
 }
 
